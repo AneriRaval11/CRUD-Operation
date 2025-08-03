@@ -2,7 +2,7 @@ package com.CRUD.Controller;
 
 
 import com.CRUD.DTO.ItemDTO;
-import com.CRUD.Service.impl.ItemServiceImpl;
+import com.CRUD.Service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ import java.util.List;
 public class ItemController {
 
     @Autowired
-    private ItemServiceImpl service;
+    private ItemService service;
 
     @PostMapping
     public ResponseEntity<ItemDTO> create(@RequestBody ItemDTO dto) {
